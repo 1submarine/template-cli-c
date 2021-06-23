@@ -1,11 +1,11 @@
 CCFLAGS := -Wall -Wextra -O3
-SOURCES := $(wildcard *.c)
-OBJECTS := $(SOURCES:.c=.o)
+SOURCES := $(wildcard src/*.c)
+OBJECTS := $(SOURCES:src/%.c=obj/%.o)
 
 .PHONY: all clean
 
 all: $(OBJECTS)
-	gcc *.o -o main
+	gcc obj/*.o -o bin/main
 
 clean:
 	rm *.o
