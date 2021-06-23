@@ -1,36 +1,21 @@
-
-Makefile,97
-CCFLAGS 1,0
-.PHONY:.PHONY3,30
-all:all5,49
-clean:clean8,97
-%.o:%.o11,113
-%.c:%.c14,145
-
-flags.c,57
-void parse_flag_short(7,75
-void parse_flag_long(12,176
-
-flags.h,78
-#define FLAGS2,14
-struct flags 6,118
-    bool verbose;7,133
-} Flags;8,151
-
-macros.h,57
-#define MACROS2,15
-#define LOG(4,43
-#define LOG(6,116
-
-main.c,62
-#define DEBUG6,80
-int main(11,148
-const char * btoc(38,904
-
-tags,0
-
-main.o,0
-
-main,0
-
-flags.o,0
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CCFLAGS	Makefile	/^CCFLAGS := -Wall -Wextra -O3$/;"	m
+DEBUG	src/main.c	/^#define DEBUG$/;"	d	file:
+FLAGS	src/flags.h	/^#define FLAGS$/;"	d
+Flags	src/flags.h	/^} Flags;$/;"	v	typeref:struct:flags
+LOG	src/macros.h	/^#define LOG(/;"	d
+MACROS	src/macros.h	/^#define MACROS$/;"	d
+OBJECTS	Makefile	/^OBJECTS := $(SOURCES:src\/%.c=obj\/%.o)$/;"	m
+SOURCES	Makefile	/^SOURCES := $(wildcard src\/*.c)$/;"	m
+btoc	src/main.c	/^const char * btoc(bool tested) {$/;"	f
+flags	src/flags.h	/^struct flags {$/;"	s
+main	src/main.c	/^int main(int argc, char **argv) {$/;"	f
+parse_flag_long	src/flags.c	/^void parse_flag_long(char flag[]) {$/;"	f
+parse_flag_short	src/flags.c	/^void parse_flag_short(char flag) {$/;"	f
+set_default_flags	src/flags.c	/^void set_default_flags(void) {$/;"	f
+verbose	src/flags.h	/^    bool verbose;$/;"	m	struct:flags
