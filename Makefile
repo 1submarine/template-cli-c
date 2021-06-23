@@ -2,7 +2,7 @@ CCFLAGS := -Wall -Wextra -O3
 
 .PHONY: all clean
 
-all: flags.o main.o
+all: $($(wildcard *.c):.c=.o)
 	gcc *.o -o main
 
 clean:
