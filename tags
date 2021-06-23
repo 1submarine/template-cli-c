@@ -4,3 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+DEBUG	main.c	/^#define DEBUG$/;"	d	file:
+FLAGS	flags.h	/^#define FLAGS$/;"	d
+Flags	flags.h	/^} Flags;$/;"	v	typeref:struct:flags
+LOG	macros.h	/^		#define LOG(/;"	d
+MACROS	macros.h	/^#define MACROS$/;"	d
+btoc	main.c	/^const char * btoc(bool tested) {$/;"	f
+flags	flags.h	/^struct flags {$/;"	s
+main	main.c	/^int main(int argc, char **argv) {$/;"	f
+parse_flag_long	flags.c	/^void parse_flag_long(char flag[]) {$/;"	f
+parse_flag_short	flags.c	/^void parse_flag_short(char flag) {$/;"	f
+verbose	flags.h	/^    bool verbose;$/;"	m	struct:flags
