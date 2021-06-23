@@ -5,7 +5,7 @@
 
 // Use this to set default flag values
 void set_default_flags(void) {
-	Flags.verbose = false
+	Flags.verbose = false;
 }
 
 // i.e. "-v"
