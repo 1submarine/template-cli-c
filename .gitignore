@@ -1,5 +1,5 @@
 .DS_STORE
-.ccls_cache/
+.ccls-cache/
 *.o
 *.a
 *.so

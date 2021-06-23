@@ -1,11 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 #include "flags.h"
 #define DEBUG
 #include "macros.h"
 
+const char * btoc(bool tested);
+
 int main(int argc, char **argv) {
+    // See if this can use heap allocation
+    bool arguments[argc - 1];
     for (int i = 1; i < argc; ++i) {
         if (argv[i][0] == '-') {
             LOG("Flag: ");
@@ -15,15 +20,22 @@ int main(int argc, char **argv) {
             } else {
                 LOG("Short");
                 for (
-                  unsigned j = 1; j < sizeof(*argv[i])/sizeof(char); ++j
+                    unsigned j = 1;
+                    j < sizeof(*argv[i])/sizeof(char) + 1;
+                    ++j
                 ) {
-                    LOG(i);
                     parse_flag_short(argv[i][j]);
                 }
             }
         } else {
-            printf("Argument\n");
+            arguments[i] = true;
+            LOG("Argument");
         }
     }
-    printf("Verbose: %s\n", Flags.verbose == true ? "true" : "false");
+    printf("Verbose: %s\n", btoc(Flags.verbose));
+}
+
+const char * btoc(bool tested) {
+    if (tested == true) return "true";
+    return "false";
 }

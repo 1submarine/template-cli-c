@@ -12,4 +12,3 @@ void parse_flag_short(char flag) {
 void parse_flag_long(char flag[]) {
     if (strcmp(flag, "verbose") == 0) Flags.verbose = true;
 }
-
