@@ -4,6 +4,6 @@
 void parse_flag_short(char flag);
 void parse_flag_long(char flag[]);
 struct flags {
-	bool verbose;
+    bool verbose;
 } Flags;
 #endif
