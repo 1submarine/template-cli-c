@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     bool arguments[argc - 1];
     for (int i = 1; i < argc; ++i) {
         if (argv[i][0] == '-') {
-            LOG("Flag: ");
+            LOG("Flag");
             if (argv[i][1] == '-') {
                 LOG("Long");
                 parse_flag_long(argv[i] + 2);

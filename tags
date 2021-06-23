@@ -1,12 +1,15 @@
 
+Makefile,97
+CCFLAGS 1,0
+.PHONY:.PHONY3,30
+all:all5,49
+clean:clean8,97
+%.o:%.o11,113
+%.c:%.c14,145
+
 flags.c,57
 void parse_flag_short(7,75
 void parse_flag_long(12,176
-
-main.c,62
-#define DEBUG6,80
-int main(11,148
-const char * btoc(38,906
 
 flags.h,78
 #define FLAGS2,14
@@ -14,7 +17,20 @@ struct flags 6,118
     bool verbose;7,133
 } Flags;8,151
 
-macros.h,61
+macros.h,57
 #define MACROS2,15
-		#define LOG(4,44
-		#define LOG(6,120
+#define LOG(4,43
+#define LOG(6,116
+
+main.c,62
+#define DEBUG6,80
+int main(11,148
+const char * btoc(38,904
+
+tags,0
+
+main.o,0
+
+main,0
+
+flags.o,0
