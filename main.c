@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "flags.h"
 #define DEBUG
@@ -7,15 +8,16 @@
 int main(int argc, char **argv) {
     for (int i = 1; i < argc; ++i) {
         if (argv[i][0] == '-') {
-            printf("Flag: ");
+            LOG("Flag: ");
             if (argv[i][1] == '-') {
-                printf("Long\n");
+                LOG("Long");
                 parse_flag_long(argv[i] + 2);
             } else {
-                printf("Short\n");
-                LOG();
-                for (unsigned long j = 1; j < sizeof(*argv[i])/sizeof(char); ++j) {
-                    LOG();
+                LOG("Short");
+                for (
+                  unsigned j = 1; j < sizeof(*argv[i])/sizeof(char); ++j
+                ) {
+                    LOG(i);
                     parse_flag_short(argv[i][j]);
                 }
             }
@@ -23,6 +25,5 @@ int main(int argc, char **argv) {
             printf("Argument\n");
         }
     }
-    printf("%d\n", Flags.verbose);
+    printf("Verbose: %s\n", Flags.verbose == true ? "true" : "false");
 }
-
