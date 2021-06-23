@@ -1,7 +1,15 @@
+#include <stdbool.h>
+#include <string.h>
+
 #include "flags.h"
 
-void parse_flags_short(char flags[]);
-void parse_flags_long(char flags[]);
+// i.e. "-v"
+void parse_flag_short(char flag) {
+    if (flag == 'v') Flags.verbose = true;
+}
 
-struct flags {
-} Flags;
+// i.e. "--verbose"
+void parse_flag_long(char flag[]) {
+    if (strcmp(flag, "verbose") == 0) Flags.verbose = true;
+}
+

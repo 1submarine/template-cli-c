@@ -1,15 +1,15 @@
-SOURCES := $(wildcard *.c)
-OBJECTS := $(SOURCES:%.c=%.o)
-CCFLAGS  := -Wall -O3
+# SOURCES := $(wildcard *.c)
+# OBJECTS := $(SOURCES:%.c=%.o)
+# CCFLAGS  := -Wall -O3
 
-all: $(OBJECTS)
-	gcc $(CCFLAGS) main.c -o main
+# all: $(OBJECTS)
+# 	gcc $(CCFLAGS) main.c -o main
 
-main.c:
-	touch $@
+# %.o: %.c
+# 	gcc $(CCFLAGS) -c $<
 
-%.o: %.c
-	gcc $(CCFLAGS) -c $<
+# %.c:
+# 	touch $@
 
-%.c:
-	touch $@
+all:
+	gcc *.c -o main

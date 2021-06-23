@@ -1,2 +1,9 @@
-void parse_flags_short(char flags[]);
-void parse_flags_long(char flags[]);
+#ifndef FLAGS
+#define FLAGS
+#include <stdbool.h>
+void parse_flag_short(char flag);
+void parse_flag_long(char flag[]);
+struct flags {
+    bool verbose;
+} Flags;
+#endif
