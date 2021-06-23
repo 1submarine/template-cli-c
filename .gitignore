@@ -1,1 +1,6 @@
 .DS_STORE
+.ccls_cache
+*.o
+*.a
+*.so
+main
