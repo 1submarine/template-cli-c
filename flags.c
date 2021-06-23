@@ -3,6 +3,11 @@
 
 #include "flags.h"
 
+// Use this to set default flag values
+void set_default_flags(void) {
+	Flags.verbose = false
+}
+
 // i.e. "-v"
 void parse_flag_short(char flag) {
     if (flag == 'v') Flags.verbose = true;

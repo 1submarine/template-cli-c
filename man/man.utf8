@@ -1,0 +1,16 @@
+TEMPLATE(1)                 General Commands Manual                TEMPLATE(1)
+
+
+
+[1mNAME[0m
+       Template CLI in C
+
+[1mSYNOPSIS[0m
+       Bootstrap code to create a CLI in C
+
+[1mDESCRIPTION[0m
+   [1mOptions[0m
+[1mFILES[0m
+[1mSEE ALSO[0m
+[1mBUGS[0m
+                                   23 Jun 21                       TEMPLATE(1)

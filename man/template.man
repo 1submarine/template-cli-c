@@ -1,0 +1,10 @@
+.TH TEMPLATE 1 "23 Jun 21"
+.SH NAME
+Template CLI in C
+.SH SYNOPSIS
+Bootstrap code to create a CLI in C
+.SH DESCRIPTION
+.SS Options
+.SH FILES
+.SH "SEE ALSO"
+.SH BUGS

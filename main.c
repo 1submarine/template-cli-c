@@ -36,6 +36,8 @@ int main(int argc, char **argv) {
 }
 
 const char * btoc(bool tested) {
-    if (tested == true) return "true";
-    return "false";
+    if (tested == true)  return "true";
+    if (tested == false) return "false";
+    // v--- NULL bool
+    else Exit(1)
 }
