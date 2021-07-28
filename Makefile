@@ -1,4 +1,4 @@
-CCFLAGS := -Wall -Wextra -Wpedantic -Wshadow -O3 # -Werror
+CCFLAGS := -Werror -Wall -Wextra -Wpedantic -Wshadow -O3
 SOURCES := $(wildcard src/*.c)
 OBJECTS := $(SOURCES:src/%.c=obj/%.o)
 
