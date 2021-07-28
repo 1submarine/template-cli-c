@@ -1,10 +1,16 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-CCFLAGS	Makefile	/^CCFLAGS := -Wall -Wextra -O3$/;"	m
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/Users/renzo/Documents/code/c/template_cli/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210620.0/
+%.c	Makefile	/^%.c:$/;"	t
+CCFLAGS	Makefile	/^CCFLAGS := -Werror -Wall -Wextra -Wpedantic -Wshadow -O3$/;"	m
 DEBUG	src/main.c	/^#define DEBUG$/;"	d	file:
 FLAGS	src/flags.h	/^#define FLAGS$/;"	d
 Flags	src/flags.h	/^} Flags;$/;"	v	typeref:struct:flags
@@ -12,10 +18,15 @@ LOG	src/macros.h	/^#define LOG(/;"	d
 MACROS	src/macros.h	/^#define MACROS$/;"	d
 OBJECTS	Makefile	/^OBJECTS := $(SOURCES:src\/%.c=obj\/%.o)$/;"	m
 SOURCES	Makefile	/^SOURCES := $(wildcard src\/*.c)$/;"	m
-btoc	src/main.c	/^const char * btoc(bool tested) {$/;"	f
+all	Makefile	/^all: $(OBJECTS)$/;"	t
+all	man/Makefile	/^all:$/;"	t
+btoc	src/main.c	/^const char * btoc(bool tested) {$/;"	f	typeref:typename:const char *
+clean	Makefile	/^clean:$/;"	t
+clean	man/Makefile	/^clean:$/;"	t
 flags	src/flags.h	/^struct flags {$/;"	s
-main	src/main.c	/^int main(int argc, char **argv) {$/;"	f
-parse_flag_long	src/flags.c	/^void parse_flag_long(char flag[]) {$/;"	f
-parse_flag_short	src/flags.c	/^void parse_flag_short(char flag) {$/;"	f
-set_default_flags	src/flags.c	/^void set_default_flags(void) {$/;"	f
-verbose	src/flags.h	/^    bool verbose;$/;"	m	struct:flags
+main	src/main.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+obj/%.o	Makefile	/^obj\/%.o: src\/%.c$/;"	t
+parse_flag_long	src/flags.c	/^void parse_flag_long(char flag[]) {$/;"	f	typeref:typename:void
+parse_flag_short	src/flags.c	/^void parse_flag_short(char flag) {$/;"	f	typeref:typename:void
+set_default_flags	src/flags.c	/^void set_default_flags(void) {$/;"	f	typeref:typename:void
+verbose	src/flags.h	/^	bool verbose;$/;"	m	struct:flags	typeref:typename:bool
