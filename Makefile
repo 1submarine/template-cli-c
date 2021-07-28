@@ -5,12 +5,12 @@ OBJECTS := $(SOURCES:src/%.c=obj/%.o)
 .PHONY: all clean
 
 all: $(OBJECTS)
-	ld obj/*.o -o bin/main
+	gcc obj/*.o -o bin/main
 
 clean:
 	rm obj/*.o
 
-$(OBJECTS): $(SOURCES)
+obj/%.o: src/%.c
 	gcc $(CCFLAGS) -c $< -o $@
 
 %.c:
