@@ -1,2 +1,7 @@
+.PHONY: all clean
+
 all:
-	groff -man -Tutf8 template.man > man.utf8
+	groff -man template.man > man.ps
+
+clean:
+	rm *.ps
