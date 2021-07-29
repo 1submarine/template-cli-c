@@ -8,9 +8,11 @@
 
 const char * btoc(bool tested);
 
+extern struct flags Flags;
+
 int main(int argc, char **argv) {
 	// See if this can use heap allocation
-	bool arguments[argc - 1];
+	/* bool arguments[argc - 1]; */
 	for (int i = 1; i < argc; ++i) {
 		if (argv[i][0] == '-') {
 			LOG("Flag");
@@ -28,7 +30,7 @@ int main(int argc, char **argv) {
 				}
 			}
 		} else {
-			arguments[i] = true;
+			/* arguments[i] = true; */
 			LOG("Argument");
 		}
 	}

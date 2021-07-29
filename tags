@@ -10,10 +10,13 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210620.0/
 %.c	Makefile	/^%.c:$/;"	t
-CCFLAGS	Makefile	/^CCFLAGS := -Werror -Wall -Wextra -Wpedantic -Wshadow -O3$/;"	m
+CC	Makefile	/^CC      := gcc-11$/;"	m
+CCFLAGS	Makefile	/^CCFLAGS := -Werror -Wall -Wextra -Wpedantic -Wshadow \\$/;"	m
 DEBUG	src/main.c	/^#define DEBUG$/;"	d	file:
 FLAGS	src/flags.h	/^#define FLAGS$/;"	d
-Flags	src/flags.h	/^} Flags;$/;"	v	typeref:struct:flags
+Flags	src/flags.c	/^struct flags Flags;$/;"	v	typeref:struct:flags
+LD	Makefile	/^LD      := $(CC)$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS := $(CCFLAGS)$/;"	m
 LOG	src/macros.h	/^#define LOG(/;"	d
 MACROS	src/macros.h	/^#define MACROS$/;"	d
 OBJECTS	Makefile	/^OBJECTS := $(SOURCES:src\/%.c=obj\/%.o)$/;"	m
@@ -25,6 +28,7 @@ clean	Makefile	/^clean:$/;"	t
 clean	man/Makefile	/^clean:$/;"	t
 flags	src/flags.h	/^struct flags {$/;"	s
 main	src/main.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+man	Makefile	/^man:$/;"	t
 obj/%.o	Makefile	/^obj\/%.o: src\/%.c$/;"	t
 parse_flag_long	src/flags.c	/^void parse_flag_long(char flag[]) {$/;"	f	typeref:typename:void
 parse_flag_short	src/flags.c	/^void parse_flag_short(char flag) {$/;"	f	typeref:typename:void
