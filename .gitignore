@@ -5,3 +5,5 @@
 *.so
 main
 *.bak
+*.ps
+*.pdf
